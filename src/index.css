@@ -1,0 +1,20 @@
+
+* {
+    font-family: 'Source Code Pro', monospace;
+    margin: 0;
+    padding: 0;
+    &::selection {
+        background-color: rgb(71, 71, 71);
+    }
+}
+
+body {
+
+    animation: fadeIn; 
+    animation-duration: 0.5s; 
+  }
+
+
+  .hamburger {
+      display: none;
+  }
