@@ -1,0 +1,138 @@
+.main-post {
+    background: rgba(240, 237, 237, 1);
+    padding: 65px;
+    width: 100%;
+    height: 100vh;
+    border: 46px solid #211F1F;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 1;
+} 
+
+.go-back {
+    position: absolute;
+    height: 46px;
+    width: 100%;
+    // border: 2px solid red;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    &-arrow{
+        position: absolute;
+        height: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+        left:48%;
+        
+        }
+        a {
+            font-size: 15px;
+            line-height: 17px;
+            text-align: center;
+            text-transform: capitalize;
+            color: #736C6C;
+            &:hover{
+                text-decoration: none;
+                color: #9b9696
+        }
+    }
+}
+
+
+.post-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.post-content {
+    display: flex;
+    flex-direction: column;
+    padding: 0 283px;
+    &-meta {
+        width: 200px;
+        // border: 1px solid red;
+        display: flex;
+        flex-direction: row;  
+        justify-content: space-between;
+    }
+    .post-date {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16.2px;
+        line-height: 19px;
+        text-transform: capitalize;
+        color: #211F1F;
+    }
+}
+
+.article {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    &-header {
+        position: inherit;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 50px;
+        line-height: 59px;
+        letter-spacing: 0.03em;
+        text-indent: 3px;
+        text-transform: capitalize;
+        color: #211F1F;
+        margin-bottom: 21px;
+    }
+    &-content {
+        // font-family: 'Times New Roman', Times, serif;
+        padding-left: 120px;
+        width: 600px;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 23px;
+        letter-spacing: 0.03em;
+        text-transform: capitalize;
+        color: #000000;
+        &:first-letter {
+            
+            font-weight: 600;
+            font-size: 50px;
+            line-height: 59px;
+            letter-spacing: 0.03em;
+            text-transform: capitalize;
+            color: #000000;
+        }
+    }
+}
+
+
+
+.navigation-main-post {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 170px;
+    gap: 5px;
+    span {
+        a {
+            font-weight: 300;
+            font-size: 16.2px;
+            line-height: 19px;
+            letter-spacing: 0.04em;
+            text-transform: capitalize;
+            color: #211F1F;
+            &:hover {
+                background-color: #211F1F;
+                color: #F0EDED;
+                text-decoration: none;
+            }
+        }
+
+    }
+}
+
+
+.post-wrapper {
+    display: flex;
+
+}

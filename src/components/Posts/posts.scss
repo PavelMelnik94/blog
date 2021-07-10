@@ -1,0 +1,60 @@
+.posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 340px);
+    grid-auto-rows: auto;
+    gap: .1rem;
+}
+
+
+
+.post {
+    position: relative;
+    min-height: 340px;
+    max-height: 341px;
+    min-width: auto;
+    border:1px solid white;
+    color: white;
+    padding: 21px;
+    background: #211F1F;
+   
+    &:hover {
+        background: #211F1F;;
+    }
+    
+    &-date {
+        font-weight: normal;
+        font-size: 16.2px;
+        line-height: 19px;
+        text-transform: capitalize;
+        color: #FFFFFF;
+        margin-bottom: 49.68px;
+    }
+    &-header {
+        max-height: 100px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        overflow: hidden; /* Обрезаем содержимое */
+  
+        a {
+        font-weight: 600;
+        font-size: 21.6px;
+        line-height: 25px;
+        text-align: center;
+        text-transform: none;
+        color: #FFFFFF;
+        &:hover {
+            background-color: #F0EDED;
+            color: #211F1F;
+            text-decoration: none;
+        }
+        }
+        
+    }
+}
+
+
+
+
+

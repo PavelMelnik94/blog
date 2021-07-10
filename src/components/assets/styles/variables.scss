@@ -1,0 +1,50 @@
+:root {
+    --react: rgb(82, 162, 236);
+    --js: rgba(204, 190, 60, 1);
+    --html: rgba(237, 34, 34, 0.65);
+    --css: rgb(1, 78, 150);
+    --project: rgb(64, 170, 15);
+  }
+
+
+
+  //tags
+  .react {
+      color: var(--react);
+      &:hover{ 
+        color: var(--react);
+        text-decoration: none;
+      }
+  }
+
+  .js {
+      color: var(--js);
+      &:hover{ 
+        color: var(--js);
+        text-decoration: none;
+      }
+  }
+
+  .html {
+      color: var(--html);
+      &:hover{ 
+        color: var(--html);
+        text-decoration: none;
+      }
+  }
+
+  .css {
+      color: var(--css);
+      &:hover{ 
+        color: var(--css);
+        text-decoration: none;
+      }
+  }
+
+  .project {
+      color: var(--project);
+      &:hover{ 
+        color: var(--project);
+        text-decoration: none;
+      }
+  }
