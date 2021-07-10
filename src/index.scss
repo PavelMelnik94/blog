@@ -2,16 +2,15 @@
 @import 'components/assets/styles/bootstrap-reboot.min.scss';
 @import 'components/assets/styles/fonts.scss';
 @import 'components/assets/styles/variables.scss';
-@import 'components/assets/styles/hamburger.scss';
+
 @import 'components/assets/styles/scroll.scss';
 @import 'components/assets/styles/tag.scss';
 
-// adaptive
-@import 'components/assets/styles/media/mobile.scss';
 
 
 // components/blocks
 @import 'components/Header/header.scss';
+@import 'components/Header/Hamburger/hamburger.scss';
 @import 'components/Search/search.scss';
 @import 'components/Main/main.scss';
 //посты
@@ -22,6 +21,8 @@
 // обратная связь
 @import 'components/Feedback/feedback.scss';
 
+// adaptive
+@import 'components/assets/styles/media/mobile.scss';
 
 * {
     font-family: 'Source Code Pro', monospace;

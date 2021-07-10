@@ -1,114 +1,19 @@
-// import './bundle.css'
+import Header from './components/Header/Header'
 
 
 function App() {
+  
+
   return (
     <body>
 
+
+    {/* холдер секции нужен для изменения скролла */}
     <section id="style-1" className="main ">
 
 
         
-            
-
-        <div className="header">
-            
-            
-
-            <div className="hamburger">
-                
-
-                    <div className="menu-button-wrapper">
-                    <div id='hamburger-button' className="menu-button">
-                        <span>Menu</span> 
-                        <div className="cover"></div>
-                    <div className="cover-two"></div>
-                    </div>
-
-                
-
-                    
-                </div>
-
-                <div id='menu' className="navbar drop">
-                    <div className="box-mobile">
-                        <div className="container-1">
-                            
-                            <input type="text" id="search" placeholder="Search" />
-                            <span className="icon"><i className="fa fa-search"></i></span>
-                        </div>
-                      </div>
-
-                      <div className="menu-one">
-                    <span className="navbar-item"><a href="!#">All posts</a></span>
-                    <span className="navbar-item"><a href="!#">Html</a></span>
-                    <span className="navbar-item"><a href="!#">Css</a></span>
-                    <span className="navbar-item"><a href="!#">JavaScript</a></span>
-                    <span className="navbar-item"><a href="!#">React</a></span>
-                    <span className="navbar-item"><a href="!#">Project</a></span>
-                </div>
-
-<div className="menu-two">
-    <span className="navbar-item"><a href="!#">My project</a></span>
-    <span className="navbar-item"><a href="!#">Knowledle</a></span>
-    <span className="navbar-item"><a href="!#">Contancts</a></span>
-
-</div>
-
-
-                </div>
-            </div>
-
-
-
-
-
-
-
-
-
-            <div className="logo">
-                <img  src="img/header/avatar.jpg" alt="ava" />
-            </div>
-
-            <div className="title">
-                <h1 className='name '>Pavel <br/> Melnik</h1>
-            </div>
-            
-
-
-
-
-
-            
-            <nav className="navigation-main"> 
-
-                <div className="box">
-                    <div className="container-1">
-                        
-                        <input type="text" id="search" placeholder="Search" />
-                        <span className="icon"><i className="fa fa-search"></i></span>
-                    </div>
-                  </div>
-                <span><a href="!#">All posts</a></span>
-                <span><a href="!#">HTML</a></span>
-                <span><a href="!#">CSS</a></span>
-                <span><a href="!#">JavaScript</a></span>
-                <span><a href="!#">React</a></span>
-                <br/>
-                <span><a href="!#">My Projects</a></span>
-                <span><a href="!#">Knowledle</a></span>
-                <span><a href="!#">contacts</a></span>
-            </nav>
-
-    
-        
-            
-                
-                
-             
-
-        </div>
+          <Header />
 
 
         <div className="content">
