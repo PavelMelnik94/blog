@@ -22,7 +22,7 @@
         height: 30px;
         top: 50%;
         transform: translateY(-50%);
-        left:48%;
+        left: 48%;
         
         }
         a {
@@ -93,6 +93,13 @@
         letter-spacing: 0.03em;
         text-transform: capitalize;
         color: #000000;
+        img {
+            max-width: 600px;
+            object-fit: scale-down;
+        }
+        figure {
+            max-width: 600px;
+        }
         &:first-letter {
             
             font-weight: 600;

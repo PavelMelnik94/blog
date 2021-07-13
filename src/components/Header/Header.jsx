@@ -5,6 +5,9 @@ import Hamburger from './Hamburger/Hamburger'
 import avatar from '../assets/img/avatar.jpg'
 
 
+import {Navigation} from '../Navigation/Navigation'
+
+
 export default function Header() {
     return (
         <div className="header">
@@ -31,22 +34,7 @@ export default function Header() {
         
         <nav className="navigation-main"> 
 
-            <div className="box">
-                <div className="container-1">
-                    
-                    <input type="text" id="search" placeholder="Search" />
-                    <span className="icon"><i className="fa fa-search"></i></span>
-                </div>
-              </div>
-            <span><a href="!#">All posts</a></span>
-            <span><a href="!#">HTML</a></span>
-            <span><a href="!#">CSS</a></span>
-            <span><a href="!#">JavaScript</a></span>
-            <span><a href="!#">React</a></span>
-            <br/>
-            <span><a href="!#">My Projects</a></span>
-            <span><a href="!#">Knowledle</a></span>
-            <span><a href="!#">contacts</a></span>
+        {Navigation.map(menuItem => <span key={menuItem.name} className="navbar-item"><a href={menuItem.url}>{menuItem.name}</a></span>)}
         </nav>
 
 

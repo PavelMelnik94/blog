@@ -1,95 +1,87 @@
-import Header from './components/Header/Header'
+import React, { useEffect, useState } from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+import Home from "./pages/Home";
+import {getAllPosts} from "./api";
+import Article from "./components/Article/Article";
+import AboutPage from "./pages/AboutPage";
+import NotFound from './pages/NotFound'
+import PreloaderApp from './components/Preloaders/PreloaderApp'
 
+const storage = window.localStorage;
 
 function App() {
+  const [posts, setPosts] = useState([]);
+
+  //разовый прелоудер
+  const [hidePreloaderApp, setShowPreloaderApp] = useState(false);
+
   
+  
+
+  useEffect(() => {
+    if (!storage.getItem('loading')) {
+      setTimeout(() => {
+        storage.setItem('loading', 'true')
+        setShowPreloaderApp(true)
+        
+      }, 2000);
+
+     } else {
+      setShowPreloaderApp(true)
+     }
+
+
+    
+
+
+    
+
+    // if (storage.getItem('loading') === 'true') { setShowPreloaderApp(true)}
+    
+  }, [hidePreloaderApp])
+
+  useEffect(() => {
+    getAllPosts().then((r) => setPosts(r));
+  }, []);
+
+
+ 
 
   return (
-    <body>
+    <>
+    {hidePreloaderApp ?  <body>
 
+      <Router>
 
-    {/* холдер секции нужен для изменения скролла */}
-    <section id="style-1" className="main ">
+        <Switch >
 
+      
+         <Route exact path='/' >
+         <Home posts={posts}   />  
+        </Route> 
 
-        
-          <Header />
+          {/* <Route path='/article' component={Article} /> */}
 
+            <Route path='/article/:id'  >
+            <Article   />
+            </Route>
+          
 
-        <div className="content">
-            
-            <div className="posts">
-                
-                <div className="post">
-                    <div className="post-cover"></div>
+          <Route path='/about' component={ AboutPage } />
+          <Route component={ NotFound  } />
+        </Switch>
 
-                    <div >
-                       <a href="!#" className="tag css">CSS</a>
-                     </div>
-
-                    <div className="post-date">August, 18 </div>
-                    
-                    <div className="post-header"> <a href="!#">Animation links Underlines Animation links Underlines Animation links Underlines</a></div>
-                    
-                </div>
-
-
-
-                <div className="post">
-
-                    <div className="post-cover"></div>
-
-                    <div >
-                        <a href="!#" className="tag js">JS</a>
-                      </div>
-                    <div className="post-date">August, 18 </div>
-                    <div className="post-header"> <a href="!#">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae earum est incidunt dolor nam sit, architecto pariatur quaerat accusamus quos quo quasi aperiam minima delectus ducimus eos ad. Aut, a. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores aperiam tempore natus totam beatae laudantium at repellat! Temporibus quos aperiam praesentium facilis at eligendi, aut illum velit dolor et? Provident.</a></div>
-
-                    
-                </div>
-
-                <div className="post">
-                    <div className="post-cover"></div>
-                    
-                    <div >
-                        <a href="!#" className="tag html">HTML</a>
-                      </div>
-                    <div className="post-date">August, 18 </div>
-                    <div className="post-header"> <a href="/post.html">Animation links Underlines Animation links Underlines Animation links Underlines</a></div>
-                    
-                </div>
-                
-                <div className="post">
-                    <div className="post-cover"></div>
-                    <div >
-                        <a href="!#" className="tag react">react</a>
-                      </div>
-                    <div className="post-date">August, 18 </div>
-                    
-                    
-                </div>
-
-
-                <div className="post">
-                    <div className="post-cover"></div>
-                    
-                    <div >
-                        <a href="!#" className="tag project">project</a>
-                      </div>
-                    <div className="post-date">August, 18 </div>
-                    
-                </div>
-
-            </div>
-        </div>
-
-    </section>
-
-
-  
-</body>
-
+      </Router>
+    </body>  : <PreloaderApp />} 
+    </>
+   
   );
 }
 
 export default App;
+
+

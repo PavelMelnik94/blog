@@ -4,30 +4,16 @@ import HamburgerMenu from './HamburgerMenu'
 
 
 
-const menu = [
-    {name: 'All posts', url: '/'},
-    {name: 'Html', url: '/'},
-    {name: 'Css', url: '/'},
-    {name: 'JavaScript', url: '/'},
-    {name: 'React', url: '/'},
-    {name: 'My Project', url: '/'},
-];
 
-const submenu = [
-    {name: 'My projects', url: '/'},
-    {name: 'Knowledle', url: '/'},
-    {name: 'Contacts', url: '/'},
-];
 
 export default function Hamburger() {
 
-    const [drop, setDropped] = useState(false);
+    const [drop, setDropped] = useState(true);
 
     const toggleHamburger = () => {
         setDropped(!drop);
     }
     
-
 
     return (
         <div className="hamburger">
@@ -53,7 +39,7 @@ export default function Hamburger() {
           </div>
 
     
-        <HamburgerMenu menu={menu} submenu={submenu} />
+        <HamburgerMenu  />
 
     </div>
 </div>

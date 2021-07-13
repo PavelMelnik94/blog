@@ -1,6 +1,6 @@
 .posts {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 340px);
+    grid-template-columns: repeat(auto-fill, 338px);
     grid-auto-rows: auto;
     gap: .1rem;
 }
@@ -9,7 +9,7 @@
 
 .post {
     position: relative;
-    min-height: 340px;
+    min-height: 338px;
     max-height: 341px;
     min-width: auto;
     border:1px solid white;
