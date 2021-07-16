@@ -12,8 +12,8 @@ async function getTagById(id) {
 }
 
 async function getPostById(id) {
-    const r = await fetch(`${URL}/posts/${id}`).then(response => response.json());
-    return r; 
+    const r = await fetch(`${URL}/posts/${id}`)
+    return await r.json(); 
 }
 
 

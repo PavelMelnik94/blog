@@ -11,7 +11,7 @@
 // components/blocks
 @import 'components/Header/header.scss';
 @import 'components/Header/Hamburger/hamburger.scss';
-@import 'components/Search/search.scss';
+// @import 'components/Search/search.scss';
 @import 'components/Main/main.scss';
 //посты
 @import 'components/Posts/posts.scss';
@@ -19,7 +19,7 @@
 
 @import 'components/Footer/footer.scss';
 // обратная связь
-@import 'components/Feedback/feedback.scss';
+// @import 'components/Feedback/feedback.scss';
 
 // adaptive
 @import 'components/assets/styles/media/mobile.scss';
@@ -33,13 +33,75 @@
     }
 }
 
-// body {
 
-//     animation: fadeIn !important; 
-//     animation-duration: 2.5s; 
-//   }
+.goback {
+  color: #181818;
+  background-color: #F0EDED;
+  padding: 12px;
+  font-size: 24px;
+  &:focus {
+    text-decoration: none;
+    color: #181818;
+  }
+  
+}
 
+.not-found {
+    height: 100vh;
+    background-color: #181818;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &-error {
+        color: #8b8b8b;
+        font-size: 105px;
+    }
+    &-text {
+        color: #8b8b8b;
+        font-size: 55px;
+    }
+}
 
   .hamburger {
       display: none;
+  }
+
+  hr.hr-flat {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+  hr.hr-dashed {
+    border: 0;
+    border-bottom: 1px dashed #ccc;
+    background: #999;
+}
+
+
+  del{
+    position:relative;
+    text-decoration:none;
+    &:before{
+      content:"";
+      background:#a30000;
+      height:1px;
+      position:absolute;
+      left:-3px;
+      top:50%;
+      width:90%;
+      transform:rotate(1deg);
+    }
+    &:after{
+      content:"";
+      background:#a30000;
+      height:1.25px;
+      position:absolute;
+      right:3px;
+      bottom:32%;
+      width:95%;
+      transform:rotate(-.25deg);
+    }
   }

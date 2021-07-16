@@ -4,7 +4,7 @@ import Header from "../components/Header/Header";
 import Posts from "../components/Posts/Posts";
 
 export default function Home(props) {
-  const { posts } = props;
+  const { posts,  } = props;
 
   return (
     <>

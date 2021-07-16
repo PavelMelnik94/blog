@@ -6,10 +6,12 @@ import {
 } from "react-router-dom";
 import Home from "./pages/Home";
 import {getAllPosts} from "./api";
-import Article from "./components/Article/Article";
-import AboutPage from "./pages/AboutPage";
+import ArticleLayout from "./components/Article/ArticleLayout";
 import NotFound from './pages/NotFound'
 import PreloaderApp from './components/Preloaders/PreloaderApp'
+import SinglePost from "./components/Article/SinglePost";
+import About from "./pages/About";
+import Feedback from "./pages/Feedback";
 
 const storage = window.localStorage;
 
@@ -23,8 +25,10 @@ function App() {
   
 
   useEffect(() => {
+    let timerId;
+
     if (!storage.getItem('loading')) {
-      setTimeout(() => {
+      timerId = setTimeout(() => {
         storage.setItem('loading', 'true')
         setShowPreloaderApp(true)
         
@@ -34,22 +38,17 @@ function App() {
       setShowPreloaderApp(true)
      }
 
-
-    
-
-
-    
-
-    // if (storage.getItem('loading') === 'true') { setShowPreloaderApp(true)}
+     return clearTimeout(timerId)
     
   }, [hidePreloaderApp])
+
 
   useEffect(() => {
     getAllPosts().then((r) => setPosts(r));
   }, []);
 
 
- 
+  
 
   return (
     <>
@@ -61,17 +60,30 @@ function App() {
 
       
          <Route exact path='/' >
-         <Home posts={posts}   />  
+         <Home posts={posts}  h />  
         </Route> 
 
-          {/* <Route path='/article' component={Article} /> */}
 
             <Route path='/article/:id'  >
-            <Article   />
+              <ArticleLayout >
+            <SinglePost  />
+            </ArticleLayout>
             </Route>
           
 
-          <Route path='/about' component={ AboutPage } />
+          <Route path='/about' >
+          <ArticleLayout>
+            <About />
+          </ArticleLayout>
+           </Route>
+
+           <Route path='/Feedback' >
+          <ArticleLayout>
+            <Feedback />
+          </ArticleLayout>
+           </Route>
+
+           
           <Route component={ NotFound  } />
         </Switch>
 

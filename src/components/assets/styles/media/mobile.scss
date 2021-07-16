@@ -1,6 +1,10 @@
 // mobile
 @media (max-width: 575.98px) {
-
+  .not-found {
+    &-text {
+        font-size: 28px !important;
+    }
+}
 
     //основная страница
   
@@ -131,8 +135,9 @@
       position: absolute;
       height: 26px;
       width: 100%;
+      left: -10%;
       &-arrow {
-        left: 43%;
+        left: 50% !important;
       }
     }
   

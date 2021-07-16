@@ -30,13 +30,7 @@ export default function Hamburger() {
     </div>
 
     <div id='menu' className={`navbar ${drop ? 'drop' : '' }`}>
-        <div className="box-mobile">
-            <div className="container-1">
-                
-                <input type="text" id="search" placeholder="Search" />
-                <span className="icon"><i className="fa fa-search"></i></span>
-            </div>
-          </div>
+        
 
     
         <HamburgerMenu  />
