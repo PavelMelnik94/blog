@@ -78,7 +78,7 @@
         line-height: 59px;
         letter-spacing: 0.03em;
         text-indent: 3px;
-        text-transform: capitalize;
+        // text-transform: capitalize;
         color: #211F1F;
         margin-bottom: 21px;
     }
@@ -91,7 +91,7 @@
         font-size: 15px;
         line-height: 23px;
         letter-spacing: 0.03em;
-        text-transform: capitalize;
+        // text-transform: capitalize;
         color: #000000;
         img {
             max-width: 600px;
@@ -118,7 +118,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    width: 170px;
+    width: 265px;
     gap: 5px;
     span {
         a {
@@ -126,7 +126,7 @@
             font-size: 16.2px;
             line-height: 19px;
             letter-spacing: 0.04em;
-            text-transform: capitalize;
+            // text-transform: capitalize;
             color: #211F1F;
             &:hover {
                 background-color: #211F1F;

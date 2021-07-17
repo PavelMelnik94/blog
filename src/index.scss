@@ -1,3 +1,4 @@
+@import "~bootstrap/scss/bootstrap";
 // assets
 @import 'components/assets/styles/bootstrap-reboot.min.scss';
 @import 'components/assets/styles/fonts.scss';
@@ -11,7 +12,6 @@
 // components/blocks
 @import 'components/Header/header.scss';
 @import 'components/Header/Hamburger/hamburger.scss';
-// @import 'components/Search/search.scss';
 @import 'components/Main/main.scss';
 //посты
 @import 'components/Posts/posts.scss';
@@ -19,10 +19,12 @@
 
 @import 'components/Footer/footer.scss';
 // обратная связь
-// @import 'components/Feedback/feedback.scss';
-
+@import 'components/FeedBackForm/feedbackform.scss';
+@import 'components/SocialMedia/socialmedia.scss';
+@import 'components/Notification/notification.scss';
 // adaptive
 @import 'components/assets/styles/media/mobile.scss';
+
 
 * {
     font-family: 'Source Code Pro', monospace;
@@ -105,3 +107,28 @@
       transform:rotate(-.25deg);
     }
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

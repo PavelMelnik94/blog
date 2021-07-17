@@ -14,7 +14,7 @@ export default function Article(props) {
     <FadeInDiv className="main-post wow-effect" id="style-1">
       <GoBack />
 
-      <div className="post-wrapper ">
+      <div id="style-1" className="post-wrapper ">
         {props.children}
         <ArticleMenu />
       </div>
