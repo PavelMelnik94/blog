@@ -71,6 +71,7 @@ function validateEmail(email) {
     setNameValue('');
     setEmailValue('');
     setMessageValue('');
+    setEmailValid(false);
     
   } else {
     setStatusMessage('noData')
