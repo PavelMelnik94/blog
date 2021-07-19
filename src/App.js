@@ -12,7 +12,7 @@ import PreloaderApp from './components/Preloaders/PreloaderApp'
 import SinglePost from "./components/Article/SinglePost";
 import About from "./pages/About";
 import Feedback from "./pages/Feedback";
-import Skills from './components/Skills/Skills'
+import Skills from './pages/Skills'
 
 const storage = window.localStorage;
 
@@ -76,6 +76,12 @@ function App() {
           <Route path='/about' >
           <ArticleLayout>
             <About />
+          </ArticleLayout>
+           </Route>
+
+           <Route path='/skills' >
+          <ArticleLayout>
+            <Skills />
           </ArticleLayout>
            </Route>
 
