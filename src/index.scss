@@ -1,4 +1,4 @@
-@import "~bootstrap/scss/bootstrap";
+
 // assets
 @import 'components/assets/styles/bootstrap-reboot.min.scss';
 @import 'components/assets/styles/fonts.scss';
@@ -21,7 +21,8 @@
 // обратная связь
 @import 'components/FeedBackForm/feedbackform.scss';
 @import 'components/SocialMedia/socialmedia.scss';
-@import 'components/Notification/notification.scss';
+// @import 'components/Notification/notification.scss';
+@import 'components/Skills/skills.scss';
 // adaptive
 @import 'components/assets/styles/media/mobile.scss';
 
@@ -35,6 +36,9 @@
     }
 }
 
+body {
+  display: block;
+}
 
 .goback {
   color: #181818;

@@ -12,6 +12,7 @@ import PreloaderApp from './components/Preloaders/PreloaderApp'
 import SinglePost from "./components/Article/SinglePost";
 import About from "./pages/About";
 import Feedback from "./pages/Feedback";
+import Skills from './components/Skills/Skills'
 
 const storage = window.localStorage;
 
@@ -60,8 +61,9 @@ function App() {
 
       
          <Route exact path='/' >
-         <Home posts={posts}  h />  
+         <Home posts={posts} />  
         </Route> 
+
 
 
             <Route path='/article/:id'  >

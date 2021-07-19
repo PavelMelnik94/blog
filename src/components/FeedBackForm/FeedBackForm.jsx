@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import emailjs from "emailjs-com";
 import { SERVICE_ID, TEMPLATE_ID } from "../../config";
 import SocialMedia from "../SocialMedia/SocialMedia";
-import Notification from "../Notification/Notification";
+import Alert from "../Alert/Alert";
+import Policy from './Policy/Policy'
+
 
 
 export default function FeedBackForm() {
@@ -46,7 +48,7 @@ function validateEmail(email) {
     
     if (nameValue !== '' 
     && emailValue !== ''
-    && emailValid 
+    && emailValid
     && messageValue !== ''
     && (isChecked) ) {
 
@@ -59,11 +61,11 @@ function validateEmail(email) {
         )
         .then(
           (response) => {
-            setStatusMessage('success')
+            setStatusMessage('email-success')
             console.log("SUCCESS!", response.status, response.text);
           },
           (err) => {
-            setStatusMessage('error')
+            setStatusMessage('email-danger')
             console.log("FAILED...", err);
           }
         );
@@ -74,7 +76,7 @@ function validateEmail(email) {
     setEmailValid(false);
     
   } else {
-    setStatusMessage('noData')
+    setStatusMessage('email-warning')
   }
 
     
@@ -82,11 +84,12 @@ function validateEmail(email) {
 
   
 
-let timerId;
+
+
   useEffect(() => {
-    timerId = setTimeout(() => {
+    let timerId = setTimeout(() => {
         setStatusMessage('')
-    }, 2000)
+    }, 3000)
     return () => {
       clearTimeout(timerId)
     }
@@ -94,16 +97,11 @@ let timerId;
 
   return (
       <>
-      {statusMessage === 'success' ?  <Notification type='#428ab48f' message='отлично! сообщение доставлено!' />  : null }
-      
-      { statusMessage === 'error' ? <Notification type='#ecc33cd3' message='ой! Сбой на сервере. попробуйте позже' /> : null}
 
-      { statusMessage === 'noData' ? <Notification type='#ec8b3cd3' message='Заполните все данные.' /> : null}
-
+    {statusMessage !== '' ?  <Alert type={statusMessage} />   : null }
       
-    <div classNam="form-wrapper">
-            
         
+        <div>
       <form id="form" className="topBefore">
         <input
           id="name"
@@ -138,7 +136,7 @@ let timerId;
         {/* <input id="policy" type="checkbox"  />  */}
         <input type="checkbox" id="checkbox-b" name="checkbox" onChange={handlePolicy} checked={isChecked} required/>
                             <label for="checkbox-b">Checkbox 2</label>
-        <label htmlFor="policy">принимаю политику конфиденциальности</label>
+        <Policy className='w-100' buttonLabel='принимаю политику конфиденциальности' />
         </div>
 
         <input

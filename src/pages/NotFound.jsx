@@ -35,7 +35,7 @@ export default function NotFound() {
         <div className='not-found'>
            <div> <h1 className='not-found-error'> 404 </h1></div>
            <div> <h2 className='not-found-text' ref={error} > </h2></div>
-             <a href='!#' onClick={goBack} className='goback'>вернуться назад </a>
+             <button onClick={goBack} className='goback'>вернуться назад </button>
         </div>
     )
 }
