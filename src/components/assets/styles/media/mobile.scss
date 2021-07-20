@@ -181,7 +181,47 @@
     }
   
 
+    .progressbar-wpapper {
+      margin-top: 10px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .progress__bar-title {
+          width: 100%;
+          // border: 1px solid blue;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          h3 {
 
+            font-size: 12px !important;
+          }
+          
+      }
+      .progress__bar-descr {
+          svg {
+              margin-left: 5px;
+          }
+      }
+      .progress__bar_bg {
+          margin-top: 0.2rem;
+          position: relative;
+          min-height: 6px;
+          width: 100%;
+          background: rgb(199, 199, 201);
+          span {
+              
+              position: absolute;
+              min-height: 6px;
+              width: 70%;
+              background: #484848;
+          }
+      }
+      
+  }
 
   } // telephone end
   
