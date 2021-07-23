@@ -1,13 +1,26 @@
 import React from "react";
 
-export default function Preloader() {
-  const url =
-    "https://gifimage.net/wp-content/uploads/2018/11/gif-rick-et-morty-png-9.gif";
+import { WaveLoading } from "react-loadingg";
 
-    
+const baseSize = {
+  width: "100%",
+  height: "50px",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  backgroundColor: "#F0EDED",
+  marginBottom: "2rem",
+};
+
+export default function Preloader() {
   return (
     <div>
-      <img className="preloader-img" src={url} alt="preloader" />
+      <WaveLoading
+        color="#181818"
+        size="small"
+        sizeContainer="small"
+        style={baseSize}
+      />
     </div>
   );
 }

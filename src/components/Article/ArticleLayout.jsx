@@ -1,7 +1,7 @@
 import React from "react";
 import ArticleMenu from "./ArticleMenu/ArticleMenu";
 import GoBack from "./GoBack/GoBack";
-import { fadeIn } from 'react-animations'
+import { fadeIn } from "react-animations";
 import styled, { keyframes } from "styled-components";
 
 const FadeInAnimation = keyframes`${fadeIn}`;

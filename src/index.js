@@ -1,12 +1,17 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.scss';
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import PreloaderApp from './components/Preloaders/PreloaderApp';
+// import App from './App';
 
+
+const App = React.lazy(() => import('./App'));
 
 ReactDOM.render(
-   <App />,
+  <Suspense fallback={ <PreloaderApp /> }>
+   <App />
+   </Suspense>,
   document.getElementById('root')
 );
 

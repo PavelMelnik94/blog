@@ -1,13 +1,9 @@
-import React from 'react'
+import React from "react";
 
-export default function ArticleBody({body}) {
+export default function ArticleBody({ body }) {
+  function createMarkup(html) {
+    return { __html: html };
+  }
 
-    function createMarkup(html) {
-        return {__html: html};
-      }
-
-    return (
-        <div dangerouslySetInnerHTML={createMarkup(body)}> 
-        </div>
-    )
+  return <div dangerouslySetInnerHTML={createMarkup(body)}></div>;
 }
