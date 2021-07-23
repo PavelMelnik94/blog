@@ -50,7 +50,7 @@ return (
 
             <article className='article'>
             <h1 className='article-header'>{title}</h1>
-            <p className='article-content'><BodyToHTML body={body} /></p>
+            <div className='article-content'><BodyToHTML body={body} /></div>
             </article>
 
          </div>

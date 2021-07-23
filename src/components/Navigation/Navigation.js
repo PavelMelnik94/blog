@@ -1,8 +1,8 @@
 const Navigation = [
+    {name: 'Мои проекты', url: '/'},
     {name: 'Обо мне', url: '/about'},
-    {name: 'Мои проекты', url: '/projects'},
     {name: 'Мой опыт', url: '/knowledle'},
-    {name: 'Скиллы', url: '/skills'},
+    {name: 'Что могу', url: '/skills'},
     {name: 'Контакты', url: '/Feedback'},
     
 ]

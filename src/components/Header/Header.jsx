@@ -9,6 +9,7 @@ import avatar from '../assets/img/avatar.jpg'
 import {Navigation} from '../Navigation/Navigation'
 
 
+
 export default function Header() {
 
     const el = useRef(null);
@@ -22,6 +23,8 @@ export default function Header() {
           backSpeed: 30,
           backDelay: 100
         });
+
+        Navigation.shift();
     
         // Destropying
         return () => {
@@ -29,6 +32,8 @@ export default function Header() {
         };
       }, []);
 
+
+      
 
     return (
         <div className="header">

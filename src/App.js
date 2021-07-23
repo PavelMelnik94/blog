@@ -20,16 +20,16 @@ function App() {
   const [posts, setPosts] = useState([]);
 
   //разовый прелоудер
-  const [hidePreloaderApp, setShowPreloaderApp] = useState(false);
+  const [showPreloaderApp, setShowPreloaderApp] = useState(false);
 
   
   
 
   useEffect(() => {
-    let timerId;
 
     if (!storage.getItem('loading')) {
-      timerId = setTimeout(() => {
+      
+      setTimeout(() => {
         storage.setItem('loading', 'true')
         setShowPreloaderApp(true)
         
@@ -39,9 +39,9 @@ function App() {
       setShowPreloaderApp(true)
      }
 
-     return clearTimeout(timerId)
+     
     
-  }, [hidePreloaderApp])
+  }, [showPreloaderApp])
 
 
   useEffect(() => {
@@ -52,10 +52,11 @@ function App() {
   
 
   return (
-    <>
-    {hidePreloaderApp ?  <body>
+    <div>
+    
+    {showPreloaderApp ?  
 
-      <Router>
+      <Router >
 
         <Switch >
 
@@ -96,9 +97,9 @@ function App() {
         </Switch>
 
       </Router>
-    </body>  : <PreloaderApp />} 
-    </>
-   
+     : <PreloaderApp />} 
+    </div>
+     
   );
 }
 

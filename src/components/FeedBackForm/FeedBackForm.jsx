@@ -135,7 +135,7 @@ function validateEmail(email) {
         <div className='checkbox-policy'>
         {/* <input id="policy" type="checkbox"  />  */}
         <input type="checkbox" id="checkbox-b" name="checkbox" onChange={handlePolicy} checked={isChecked} required/>
-                            <label for="checkbox-b">Checkbox 2</label>
+                            <label htmlFor="checkbox-b">Checkbox 2</label>
         <Policy className='w-100' buttonLabel='принимаю политику конфиденциальности' />
         </div>
 

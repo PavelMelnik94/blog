@@ -6,6 +6,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
     .progress__bar-title {
         width: 100%;
         // border: 1px solid blue;
@@ -14,8 +15,10 @@
         justify-content: space-between;
         align-items: center;
         
+        
     }
     .progress__bar-descr {
+        cursor: pointer;
         svg {
             margin-left: 5px;
         }
@@ -26,6 +29,7 @@
         min-height: 6px;
         width: 100%;
         background: rgb(199, 199, 201);
+        
         span {
             
             position: absolute;

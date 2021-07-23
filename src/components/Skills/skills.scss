@@ -12,7 +12,12 @@
         gap: 1rem;
         background: #211F1F;
         color: #F0EDED;
-        
+        cursor: pointer;
+        &__icon {
+            svg {
+                fill: #F0EDED !important;
+            }
+        }
     }
     &_content {
         padding: 1rem;

@@ -21,9 +21,9 @@ export default function Feedback() {
 
             <article className='article'>
             <h1 className='article-header'>Свяжитесь со мной любым удобным для вас способом</h1>
-            <p className='article-content'>
+            <div className='article-content'>
             <FeedBackForm />
-            </p>
+            </div>
             </article>
 
          </div>

@@ -45,10 +45,7 @@
       }
     }
   
-    .title {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+    .title { 
       width: 100%;
       height: 115px;
     }
@@ -56,22 +53,11 @@
       text-align: center;
       width: 100%;
       height: 200px;
-      font-style: normal;
-      font-weight: normal;
       font-size: 32px !important;
       line-height: 40px !important;
-      letter-spacing: 0.04em;
-      text-transform: capitalize;
-      color: #f0eded;
     }
     .subname {
-      font-weight: 400;
-      font-size: 17.6px;
-      line-height: 25px;
-      letter-spacing: 0.07em;
-      text-transform: lowercase;
-      color: #f0eded;
-      margin-bottom: 0;
+      font-size: 17.6px !important;
       text-align: center;
     }
   
@@ -128,12 +114,13 @@
   
     .main-post {
       border: 26px solid #211f1f;
+      border-top: 35px solid #211f1f;
       padding: 0;
     }
   
     .go-back {
       position: absolute;
-      height: 26px;
+      height: 35px;
       width: 100%;
       left: -10%;
       &-arrow {
