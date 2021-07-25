@@ -12,9 +12,13 @@ export default function GoBack() {
     ArrowPosition = position;
   }, [position]);
 
+
+
+
   const goBackMove = (e) => {
     const newPosition = { left: e.pageX - 50 + "px" };
     setPosition(newPosition);
+    
   };
 
   return (
@@ -29,3 +33,5 @@ export default function GoBack() {
     </div>
   );
 }
+
+

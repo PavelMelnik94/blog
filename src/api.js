@@ -1,7 +1,7 @@
-import {URL} from './config'
+import {URL, POSTS_URL} from './config'
 
 async function getAllPosts() {
-    const r = await fetch(`${URL}/posts/`).then(response => response.json());
+    const r = await fetch(`${POSTS_URL}`).then(response => response.json());
     return r; 
 }
 

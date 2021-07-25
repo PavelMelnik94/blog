@@ -3,6 +3,7 @@ import './index.scss';
 import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import PreloaderApp from './components/Preloaders/PreloaderApp';
+import "react-alice-carousel/lib/scss/alice-carousel.scss";
 // import App from './App';
 
 

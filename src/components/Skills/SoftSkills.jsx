@@ -47,15 +47,11 @@ export default function SoftSkills() {
               progressPercent='95%'
               description='Большой уровень насмотренности.Непереношу однообразие и обыйденность.' />
 
-              <ProgressBar
-              skillName='Гибкость'
-              progressPercent='100%'
-              description='Тактичность на высоте.' />
 
               <ProgressBar
               skillName='Лидерские качества'
               progressPercent='20%'
-              description='К сожелению или частью я точно не лидер.Предпочитаю не брать ответственность за других.Не умею мотивировать.' />
+              description='Предпочитаю не брать ответственность за других.Не умею мотивировать.' />
 
               <ProgressBar
               skillName='Дружелюбность'

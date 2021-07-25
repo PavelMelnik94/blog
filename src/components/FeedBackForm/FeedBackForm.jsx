@@ -10,10 +10,13 @@ export default function FeedBackForm() {
   const [nameValue, setNameValue] = useState("");
   const [emailValue, setEmailValue] = useState("");
   const [messageValue, setMessageValue] = useState("");
-  const [isChecked, setIsChecked] = useState(false);
   const [statusMessage, setStatusMessage] = useState("");
+  const [isChecked, setIsChecked] = useState(false);
   const [emailValid, setEmailValid] = useState(false);
   const [MessageLoading, setMessageLoading] = useState(false);
+  
+
+
 
   const changeName = (e) => {
     setNameValue(e.target.value);
@@ -96,6 +99,7 @@ export default function FeedBackForm() {
       {statusMessage !== "" ? <Alert type={statusMessage} /> : null}
       {MessageLoading ? <Preloader /> : null}
 
+
       <div>
         <form id="form" className="topBefore">
           <input
@@ -106,6 +110,7 @@ export default function FeedBackForm() {
             placeholder="имя"
             required
           />
+
 
           <input
             id="email"

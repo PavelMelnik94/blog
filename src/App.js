@@ -16,6 +16,9 @@ function App() {
     getAllPosts().then((r) => setPosts(r));
   }, []);
 
+
+  
+
   return (
     <div>
       <Router>
