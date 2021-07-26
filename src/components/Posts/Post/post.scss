@@ -7,6 +7,21 @@
     overflow-x: hidden;
     overflow-y: auto;
     z-index: 1;
+    p {
+        a {
+            padding-right: 5px;
+            padding-left: 5px;
+            background-color: #211F1F;
+            color: #F0EDED;
+            &:hover {
+                color: #F0EDED;
+                text-decoration: none;
+            }
+            &:active {
+                color: #F0EDED;;
+            }
+        }
+    }
 } 
 
 .go-back {
@@ -93,12 +108,13 @@
         letter-spacing: 0.03em;
         // text-transform: capitalize;
         color: #000000;
-        img {
-            max-width: 600px;
-            object-fit: scale-down;
-        }
+        
         figure {
             max-width: 600px;
+            img {
+                max-width: 600px !important;
+                object-fit: scale-down;
+            }
         }
         &:first-letter {
             

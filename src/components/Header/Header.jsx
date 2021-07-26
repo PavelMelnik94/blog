@@ -9,6 +9,8 @@ import { Navigation } from "../Navigation/Navigation";
 export default function Header() {
   const el = useRef(null);
 
+  
+
   useEffect(() => {
     const typed = new Typed(el.current, {
       strings: [
@@ -24,7 +26,7 @@ export default function Header() {
       backDelay: 100,
     });
 
-    Navigation.shift();
+    if (Navigation.length === 5) Navigation.shift();
 
     // Destropying
     return () => {

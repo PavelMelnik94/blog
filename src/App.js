@@ -8,6 +8,7 @@ import SinglePost from "./components/Article/SinglePost";
 import About from "./pages/About";
 import Feedback from "./pages/Feedback";
 import Skills from "./pages/Skills";
+import Knowledge from './pages/Knowledge'
 
 function App() {
   const [posts, setPosts] = useState([]);
@@ -42,6 +43,12 @@ function App() {
           <Route path="/skills">
             <ArticleLayout>
               <Skills />
+            </ArticleLayout>
+          </Route>
+
+          <Route path="/knowledge">
+            <ArticleLayout>
+              <Knowledge />
             </ArticleLayout>
           </Route>
 

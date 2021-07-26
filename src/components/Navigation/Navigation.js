@@ -1,7 +1,7 @@
 const Navigation = [
   { name: "Проекты", url: "/" },
   { name: "Обо мне", url: "/about" },
-  { name: "Мой опыт", url: "/knowledle" },
+  { name: "Как могу", url: "/knowledge" },
   { name: "Что могу", url: "/skills" },
   { name: "Контакты", url: "/Feedback" },
 ];
